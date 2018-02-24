@@ -16,8 +16,8 @@ package assg5_Hernandez;
  */
 public class ComplexNum {
 
-	public double real;
-	public double imaginary;
+	private double real;
+	private double imaginary;
 	
 	/**
 	 * Constructs a complex number <i> a + bi </i> both values are stored as doubles.
