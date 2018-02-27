@@ -84,7 +84,7 @@ public class ComplexNum {
 	 * Provides the difference of two Complex Numbers.
 	 * @param subtract Is the ComplexNum being used as subtracting value.
 	 * @return New ComplexNum which is the difference of two given ComplexNum.
-	 */
+	 */ 
 	public ComplexNum sub (ComplexNum subtract) {
 		return new ComplexNum (this.real - subtract.getReal(), this.imaginary
 				- subtract.getImaginary()); 

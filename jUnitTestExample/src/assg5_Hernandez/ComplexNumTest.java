@@ -4,7 +4,7 @@
  * @version Assignment 5
  * <p>Csci2540Assignment 5 is a junit test for testing ComplexNum.java
  * <p>csci2540Assignment 2 & 5 is a group of methods for creating and 
- * manipulating Complex Numbers</p>
+ * manipulating Complex Numbers</p> 
  */
 package assg5_Hernandez;
 
