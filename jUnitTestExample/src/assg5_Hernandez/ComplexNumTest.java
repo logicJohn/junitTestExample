@@ -2,6 +2,7 @@
  * @author Johnnie Hernandez
  * 
  * @version Assignment 5
+ * <p>Csci2540Assignment 5 is a junit test for testing ComplexNum.java
  * <p>csci2540Assignment 2 & 5 is a group of methods for creating and 
  * manipulating Complex Numbers</p>
  */
@@ -21,7 +22,9 @@ public class ComplexNumTest {
 	private ComplexNum m;
 	private ComplexNum n;
 	
-		
+	/**
+	 * Test default constructor of ComplexNum	
+	 */
 	@Test
 	public void testComplexNum() {
 		l = new ComplexNum();
@@ -29,7 +32,9 @@ public class ComplexNumTest {
 		assertEquals("0.0 should be", 0.0, l.getImaginary(), 0.0);
 	}
 
-	
+	/**
+	 * Test construct of ComplexNum (double, double)
+	 */
 	@Test
 	public void testComplexNumDoubleDouble() {
 		m = new ComplexNum(a, b);
@@ -41,7 +46,9 @@ public class ComplexNumTest {
 		assertEquals(d + " should be", d, n.getImaginary(), 0.0);
 	}
 
-	
+	/**
+	 * Test ComplexNum getReal()
+	 */
 	@Test
 	public void testGetReal() {
 		l = new ComplexNum();
@@ -53,7 +60,9 @@ public class ComplexNumTest {
 		assertEquals("Real of ComplexNum", c, n.getReal(), 0.0);
 	}
 
-	
+	/**
+	 * Test ComplexNum getImaginary()
+	 */
 	@Test
 	public void testGetImaginary() {
 		l = new ComplexNum();
@@ -66,7 +75,9 @@ public class ComplexNumTest {
 
 	}
 
-	
+	/**
+	 * Test ComplexNum setReal(double)
+	 */
 	@Test
 	public void testSetReal() {
 		l = new ComplexNum();
@@ -83,7 +94,9 @@ public class ComplexNumTest {
 		
 	}
 
-	
+	/**
+	 * Test ComplexNum setImaginary(double)
+	 */
 	@Test
 	public void testSetImaginary() {
 		l = new ComplexNum();
@@ -100,6 +113,9 @@ public class ComplexNumTest {
 		
 	}
 
+	/**
+	 * Test ComplexNum add(ComplexNum)
+	 */
 	@Test
 	public void testAdd() {
 		l = new ComplexNum();
@@ -120,6 +136,9 @@ public class ComplexNumTest {
 		
 	}
 
+	/**
+	 * Test ComplexNum sub(ComplexNum)
+	 */
 	@Test
 	public void testSub() {
 		l = new ComplexNum();
@@ -129,18 +148,19 @@ public class ComplexNumTest {
 		ComplexNum r = l.sub(m);
 		ComplexNum s = m.sub(l);
 		ComplexNum t = n.sub(n);
-		
 
-		assertEquals(" should be", -a, r.getReal(), 0.0);
-		assertEquals(" should be", a, s.getReal(), 0.0);
-		assertEquals(" should be", 0.0, t.getReal(), 0.0);
-		assertEquals(" should be", -b, r.getImaginary(), 0.0);
-		assertEquals(" should be", b, s.getImaginary(), 0.0);
-		assertEquals(" should be", 0.0, t.getImaginary(), 0.0);		
-				
-		
+		assertEquals("Real of the difference of two ComplexNum", -a, r.getReal(), 0.0);
+		assertEquals("Real of the difference of two ComplexNum", a, s.getReal(), 0.0);
+		assertEquals("Real of the difference of two ComplexNum", 0.0, t.getReal(), 0.0);
+		assertEquals("Imaginary of the difference of two ComplexNum", -b, r.getImaginary(), 0.0);
+		assertEquals("Imaginary of the difference of two ComplexNum", b, s.getImaginary(), 0.0);
+		assertEquals("Imaginary of the difference of two ComplexNum", 0.0, t.getImaginary(), 0.0);		
+
 	}
 
+	/**
+	 * Test ComplexNum mul(ComplexNum)
+	 */
 	@Test
 	public void testMul() {
 		l = new ComplexNum();
@@ -152,13 +172,16 @@ public class ComplexNumTest {
 		ComplexNum t = n.mul(n);
 		
 		assertEquals("Multiplication of ComplexNum real", 0.0, r.getReal(), 0.0 );
-		assertEquals("Multiplication of ComplexNum real", -40.5, s.getReal(), 0.0);
-		assertEquals("Multiplication of ComplexNum real", -20.72, t.getReal(), 0.0);
+		assertEquals("Multiplication of ComplexNum real", ((a*c)-(b*d)), s.getReal(), 0.0);
+		assertEquals("Multiplication of ComplexNum real", ((c*c)-(d*d)), t.getReal(), 0.0);
 		assertEquals("Multiplication of ComplexNum imaginary", 0.0, r.getImaginary(), 0.0);
-		assertEquals("Multiplication of ComplexNum imaginary", -10.2, s.getImaginary(), 0.0);
-		assertEquals("Multiplication of ComplexNum imaginary", -5.1, t.getImaginary(), 0.0);
+		assertEquals("Multiplication of ComplexNum imaginary", ((a*d)+(b*c)), s.getImaginary(), 0.0);
+		assertEquals("Multiplication of ComplexNum imaginary", ((c*d)+(d*c)), t.getImaginary(), 0.0);
 	}
 
+	/**
+	 * Test ComplexNum neg()
+	 */
 	@Test
 	public void testNeg() {
 		l = new ComplexNum();
@@ -179,7 +202,9 @@ public class ComplexNumTest {
 				
 	}
 
-	
+	/**
+	 * Test ComplexNum toString()
+	 */
 	@Test
 	public void testToString() {
 		l = new ComplexNum();
@@ -192,6 +217,9 @@ public class ComplexNumTest {
 		
 	}
 
+	/**
+	 * Test Complex equals(ComplexNum)
+	 */
 	@Test
 	public void testEqualsObject() {
 		l = new ComplexNum();
