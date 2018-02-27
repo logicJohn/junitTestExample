@@ -8,11 +8,12 @@
  */
 package assg5_Hernandez;
 
-import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class ComplexNumTest extends ComplexNum{
+import junit.framework.TestCase;
+
+public class ComplexNumTest extends TestCase{
 
 	private double a = 4.6;
 	private double b = 10.2;
@@ -21,13 +22,17 @@ public class ComplexNumTest extends ComplexNum{
 	private ComplexNum l;
 	private ComplexNum m;
 	private ComplexNum n;
-	
+		
+	protected void setUp() {
+		l = new ComplexNum();
+		m = new ComplexNum(a, b);
+		n = new ComplexNum(c, d);
+	}
 	/**
 	 * Test default constructor of ComplexNum	
 	 */
 	@Test
 	public void testComplexNum () {
-		l = new ComplexNum();
 		assertEquals("0.0 should be", 0.0, l.getReal(), 0.0);
 		assertEquals("0.0 should be", 0.0, l.getImaginary(), 0.0);
 	}
@@ -37,8 +42,6 @@ public class ComplexNumTest extends ComplexNum{
 	 */
 	@Test
 	public void testComplexNumDoubleDouble () {
-		m = new ComplexNum(a, b);
-		n = new ComplexNum(c, d);
 		
 		assertEquals(a + " should be", a, m.getReal(), 0.0);
 		assertEquals(b + " should be", b, m.getImaginary(), 0.0);
@@ -51,9 +54,7 @@ public class ComplexNumTest extends ComplexNum{
 	 */
 	@Test
 	public void testGetReal () {
-		l = new ComplexNum();
-		m = new ComplexNum(a, b);
-		n = new ComplexNum(c, d);
+		
 		
 		assertEquals("Real of ComplexNum", 0.0, l.getReal(), 0.0);
 		assertEquals("Real of ComplexNum", a, m.getReal(), 0.0);
@@ -65,9 +66,6 @@ public class ComplexNumTest extends ComplexNum{
 	 */
 	@Test
 	public void testGetImaginary () {
-		l = new ComplexNum();
-		m = new ComplexNum(a, b);
-		n = new ComplexNum(c, d);
 		
 		assertEquals("Imaginary of ComplexNum", 0.0, l.getImaginary(), 0.0);
 		assertEquals("Imaginary of ComplexNum", b, m.getImaginary(), 0.0);
@@ -80,9 +78,6 @@ public class ComplexNumTest extends ComplexNum{
 	 */
 	@Test
 	public void testSetReal () {
-		l = new ComplexNum();
-		m = new ComplexNum(a, b);
-		n = new ComplexNum(c, d);
 		
 		l.setReal(4);
 		m.setReal(5.5);
@@ -99,9 +94,6 @@ public class ComplexNumTest extends ComplexNum{
 	 */
 	@Test
 	public void testSetImaginary () {
-		l = new ComplexNum();
-		m = new ComplexNum(a, b);
-		n = new ComplexNum(c, d);
 		
 		l.setImaginary(4);
 		m.setImaginary(5.5);
@@ -118,9 +110,6 @@ public class ComplexNumTest extends ComplexNum{
 	 */
 	@Test
 	public void testAdd () {
-		l = new ComplexNum();
-		m = new ComplexNum(a, b);
-		n = new ComplexNum(c, d);
 		
 		ComplexNum r = l.add(m);
 		ComplexNum s = m.add(l);
@@ -141,9 +130,6 @@ public class ComplexNumTest extends ComplexNum{
 	 */
 	@Test
 	public void testSub () {
-		l = new ComplexNum();
-		m = new ComplexNum(a, b);
-		n = new ComplexNum(c, d);
 		
 		ComplexNum r = l.sub(m);
 		ComplexNum s = m.sub(l);
@@ -163,9 +149,6 @@ public class ComplexNumTest extends ComplexNum{
 	 */
 	@Test
 	public void testMul () {
-		l = new ComplexNum();
-		m = new ComplexNum(a, b);
-		n = new ComplexNum(c, d);
 	
 		ComplexNum r = l.mul(m);
 		ComplexNum s = m.mul(n);
@@ -184,9 +167,6 @@ public class ComplexNumTest extends ComplexNum{
 	 */
 	@Test
 	public void testNeg () {
-		l = new ComplexNum();
-		m = new ComplexNum(a, b);
-		n = new ComplexNum(c, d);
 		
 		ComplexNum r = l.neg();
 		ComplexNum s = m.neg();
@@ -207,9 +187,6 @@ public class ComplexNumTest extends ComplexNum{
 	 */
 	@Test
 	public void testToString () {
-		l = new ComplexNum();
-		m = new ComplexNum(a, b);
-		n = new ComplexNum(c, d);
 		
 		assertEquals("Method toString should be", "0.0+0.0i", l.toString());
 		assertEquals("Method toString should be", a + "+" + b + "i", m.toString());
@@ -222,12 +199,9 @@ public class ComplexNumTest extends ComplexNum{
 	 */
 	@Test
 	public void testEqualsObject () {
-		l = new ComplexNum();
-		m = new ComplexNum(0.0, 0.0);
-		n = new ComplexNum(c, d);
 		
-		assertTrue("Should be true", l.equals(m));
-		assertTrue("Should be true", m.equals(l));
+		assertTrue("Should be true", l.equals(l));
+		assertTrue("Should be true", m.equals(m));
 		assertFalse("Should be false", n.equals(l));
 		assertFalse("Should be false", n.equals(m));
 		
