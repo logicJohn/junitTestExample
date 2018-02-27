@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class ComplexNumTest {
+public class ComplexNumTest extends ComplexNum{
 
 	private double a = 4.6;
 	private double b = 10.2;
