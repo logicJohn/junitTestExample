@@ -2,7 +2,7 @@
  * @author Johnnie Hernandez
  * 
  * @version Assignment 5
- * <p>csci2540Assignment2 is a group of methods for creating and 
+ * <p>csci2540Assignment 2 & 5 is a group of methods for creating and 
  * manipulating Complex Numbers</p>
  */
 package assg5_Hernandez;
@@ -96,8 +96,11 @@ public class ComplexNum {
 	 * @return New ComplexNum which is the multiplied value of two given ComplexNum.
 	 */
 	public ComplexNum mul (ComplexNum multiple) {
-		return new ComplexNum (this.real * multiple.getReal(), this.imaginary
-				* multiple.getImaginary());
+		double tempReal = (this.real*multiple.real) 
+				- (this.imaginary*multiple.imaginary);
+		double tempImaginary = (this.real*multiple.imaginary) 
+				+ (this.imaginary*multiple.real);
+		return new ComplexNum(tempReal,tempImaginary);
 	}
 	
 	/**
