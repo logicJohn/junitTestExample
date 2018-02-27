@@ -15,10 +15,10 @@ import junit.framework.TestCase;
 
 public class ComplexNumTest extends TestCase{
 
-	private double a = 4.6;
+	private double a = 2.2;
 	private double b = 10.2;
-	private double c = 2.3;
-	private double d = 5.1;
+	private double c = 1.1;
+	private double d = 0.0;
 	private ComplexNum l;
 	private ComplexNum m;
 	private ComplexNum n;
