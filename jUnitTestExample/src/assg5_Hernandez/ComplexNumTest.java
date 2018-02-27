@@ -26,7 +26,7 @@ public class ComplexNumTest extends ComplexNum{
 	 * Test default constructor of ComplexNum	
 	 */
 	@Test
-	public void testComplexNum() {
+	public void testComplexNum () {
 		l = new ComplexNum();
 		assertEquals("0.0 should be", 0.0, l.getReal(), 0.0);
 		assertEquals("0.0 should be", 0.0, l.getImaginary(), 0.0);
@@ -36,7 +36,7 @@ public class ComplexNumTest extends ComplexNum{
 	 * Test construct of ComplexNum (double, double)
 	 */
 	@Test
-	public void testComplexNumDoubleDouble() {
+	public void testComplexNumDoubleDouble () {
 		m = new ComplexNum(a, b);
 		n = new ComplexNum(c, d);
 		
@@ -50,7 +50,7 @@ public class ComplexNumTest extends ComplexNum{
 	 * Test ComplexNum getReal()
 	 */
 	@Test
-	public void testGetReal() {
+	public void testGetReal () {
 		l = new ComplexNum();
 		m = new ComplexNum(a, b);
 		n = new ComplexNum(c, d);
@@ -64,7 +64,7 @@ public class ComplexNumTest extends ComplexNum{
 	 * Test ComplexNum getImaginary()
 	 */
 	@Test
-	public void testGetImaginary() {
+	public void testGetImaginary () {
 		l = new ComplexNum();
 		m = new ComplexNum(a, b);
 		n = new ComplexNum(c, d);
@@ -79,7 +79,7 @@ public class ComplexNumTest extends ComplexNum{
 	 * Test ComplexNum setReal(double)
 	 */
 	@Test
-	public void testSetReal() {
+	public void testSetReal () {
 		l = new ComplexNum();
 		m = new ComplexNum(a, b);
 		n = new ComplexNum(c, d);
@@ -98,7 +98,7 @@ public class ComplexNumTest extends ComplexNum{
 	 * Test ComplexNum setImaginary(double)
 	 */
 	@Test
-	public void testSetImaginary() {
+	public void testSetImaginary () {
 		l = new ComplexNum();
 		m = new ComplexNum(a, b);
 		n = new ComplexNum(c, d);
@@ -117,7 +117,7 @@ public class ComplexNumTest extends ComplexNum{
 	 * Test ComplexNum add(ComplexNum)
 	 */
 	@Test
-	public void testAdd() {
+	public void testAdd () {
 		l = new ComplexNum();
 		m = new ComplexNum(a, b);
 		n = new ComplexNum(c, d);
@@ -140,7 +140,7 @@ public class ComplexNumTest extends ComplexNum{
 	 * Test ComplexNum sub(ComplexNum)
 	 */
 	@Test
-	public void testSub() {
+	public void testSub () {
 		l = new ComplexNum();
 		m = new ComplexNum(a, b);
 		n = new ComplexNum(c, d);
@@ -162,7 +162,7 @@ public class ComplexNumTest extends ComplexNum{
 	 * Test ComplexNum mul(ComplexNum)
 	 */
 	@Test
-	public void testMul() {
+	public void testMul () {
 		l = new ComplexNum();
 		m = new ComplexNum(a, b);
 		n = new ComplexNum(c, d);
@@ -183,7 +183,7 @@ public class ComplexNumTest extends ComplexNum{
 	 * Test ComplexNum neg()
 	 */
 	@Test
-	public void testNeg() {
+	public void testNeg () {
 		l = new ComplexNum();
 		m = new ComplexNum(a, b);
 		n = new ComplexNum(c, d);
@@ -206,7 +206,7 @@ public class ComplexNumTest extends ComplexNum{
 	 * Test ComplexNum toString()
 	 */
 	@Test
-	public void testToString() {
+	public void testToString () {
 		l = new ComplexNum();
 		m = new ComplexNum(a, b);
 		n = new ComplexNum(c, d);
@@ -221,7 +221,7 @@ public class ComplexNumTest extends ComplexNum{
 	 * Test Complex equals(ComplexNum)
 	 */
 	@Test
-	public void testEqualsObject() {
+	public void testEqualsObject () {
 		l = new ComplexNum();
 		m = new ComplexNum(0.0, 0.0);
 		n = new ComplexNum(c, d);
